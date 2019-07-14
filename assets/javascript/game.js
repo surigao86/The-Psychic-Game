@@ -29,6 +29,12 @@ const reset = () => {
     updatedLeterToGuest (); 
     updatedGuessLeft(); 
     updatedGuessesSoFar();
+   if(losses == 5){
+       losses=0;
+   }
+   if(wins == 3){
+       wins=0;
+   }
 }
 
 updatedLeterToGuest();
@@ -53,5 +59,5 @@ document.onkeydown = () => {
         losses++;
         document.querySelector("#losses").innerHTML = losses;
         reset();
-    }
+    } 
 }
